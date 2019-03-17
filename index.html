@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
 	<header>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>
 			ToDoList
 		</title>
 		<style>
 			.checked {
+				color: gray;
+			}
+			.textDecoration{
+			text-decoration-line: line-through;
+			}
+			.selected {
 				color: red;
 			}
-  </style>
+  		</style>
 	</header>
 	<body>
-		<form>
-			<div class="wrapper">
-    <div class="header">
-        <h1>ToDoList</h1>
-        <input type="text" placeholder="Task" id="toDoEl">
-        <input type="button"; value = "add"; onclick="newElement()">
-    </div>
-    <ul id="list">
-
-    </ul>
-</div> 
+	<h1>ToDoList</h1>
+		<form onsubmit="newProject(); return false">
+			<input type="text" placeholder="Project" id="toDoProj">
+			<input id = "buttonCreateProj" type="button" value = "add" onclick="newProject()">
 		</form>
+	<ul id="project"></ul>
 		<br>
-	</body>	
+		<form onsubmit="newElement(); return false">
+			<input type="text" placeholder="Task" id="toDoEl">
+			<input id = "buttonCreateTask" type="button" value = "add" onclick="newElement()">
+		</form>
+	<ul id="list"></ul>
+	</body>
 	<script src="script.js"></script>
 </html>

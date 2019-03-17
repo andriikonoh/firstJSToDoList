@@ -1,0 +1,14 @@
+{
+  "name": "firstJSToDoList",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "json-server": "^0.14.2"
+  },
+  "scripts": {
+    "start": "json-server --watch db.json --static ./static",
+    "test": "echo \"Error: no test specified\" && exit 1"
+   }
+}
+
