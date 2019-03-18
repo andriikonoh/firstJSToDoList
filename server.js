@@ -1,10 +1,12 @@
-var http = require('http');
-var static = require('node-static');
-var file = new static.Server('.');
+const PORT = process.env.PORT || 3000;
 
-http.createServer(function(req, res) {
-    file.serve(req, res);
-}).listen(3000);
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults();
 
-console.log('Server running on port 3000');
-
+server.use(middlewares);
+server.use(router);
+server.listen(PORT, () => {
+    console.log('JSON Server is running on port [' + PORT + ']');
+});
