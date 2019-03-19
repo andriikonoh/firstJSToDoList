@@ -23,20 +23,17 @@
 	<h1>ToDoList</h1>
 		<form onsubmit="newProject(); return false">
 			<input type="text" placeholder="Project" id="toDoProj">
-			<input id = "buttonCreateProj" type="button" value = "add" onclick="newProject()">
+			<input id = "buttonCreateProj" type="button" value = "Create New Project" onclick="newProject()">
 		</form>
+	<header>Projects</header>
 	<ul id="project"></ul>
 		<br>
-		<form onsubmit="newElement(); return false">
+		<form onsubmit="newTask(); return false">
 			<input type="text" placeholder="Task" id="toDoEl">
-			<input id = "buttonCreateTask" type="button" value = "add" onclick="newElement()">
+			<input id = "buttonCreateTask" type="button" value = "Create New Task" onclick="newTask()">
 		</form>
 	<br>
-	<form>
-		<input id = "buttonRenderProjects" type = "button" value = "projects" onclick="renderProjects()">
-		<input id = "buttonRenderTasks" type = "button" value = "tasks" onclick="renderTasks()">
-	</form>
-
+	<header>Tasks</header>
 	<ul id="list"></ul>
 	</body>
 	<script src="script.js"></script>
