@@ -1,6 +1,25 @@
 {
   "projects": [
+    {
+      "name": "First Project",
+      "id": 1
+    }
   ],
   "tasks": [
+    {
+      "projectId": "1",
+      "name": "Task1",
+      "id": 1
+    },
+    {
+      "projectId": "1",
+      "name": "Task2",
+      "id": 2
+    },
+    {
+      "projectId": "1",
+      "name": "Task3",
+      "id": 3
+    }
   ]
 }
